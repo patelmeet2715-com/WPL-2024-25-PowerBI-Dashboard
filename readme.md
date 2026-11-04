@@ -12,6 +12,21 @@ An end-to-end sports & financial analytics Power BI solution analyzing the **202
 
 ---
 
+## 📊 Report Pages & Key Insights
+
+1. **Page 1 — Standings & Match Overview**:
+   - **Liverpool (84 pts, +45 GD, 86 GF)** clinched the title ahead of **Arsenal (74 pts, +35 GD)**, **Manchester City (71 pts)**, and **Chelsea (69 pts)**.
+   - Across 380 fixtures, clubs scored **1,115 goals (2.93/match)** with **40.8% Home Wins (155)**, **34.7% Away Wins (132)**, and **24.5% Draws (93)**.
+2. **Page 2 — Club Tactical & Possession**:
+   - **Manchester City (61.6% possession, 28,022 touches)** and **Liverpool (57.7% possession, 1,924 progressive passes)** led territorial control, while **Nottingham Forest (65 pts on 41.2% possession)** excelled in direct counter-attacking play.
+3. **Page 3 — Player Scoring & Progression**:
+   - **Mohamed Salah** led the Golden Boot and Playmaker charts with **47 G+A (29 Goals, 18 Assists)**, followed by **Alexander Isak (29 G+A: 23G, 6A)**, **Bryan Mbeumo (27 G+A: 20G, 7A)**, and **Erling Haaland (25 G+A: 22G, 3A)**.
+4. **Page 4 — Wage Bill & Financial ROI**:
+   - Total league payroll reached **£1,755.55M/yr**, led by **Manchester City (£222.98M)**, **Manchester United (£189.36M)**, **Chelsea (£175.45M)**, and **Arsenal (£174.93M)**.
+   - **Ipswich Town (£0.51M/pt)**, **Bournemouth (£0.91M/pt)**, **Nottingham Forest (£0.92M/pt)**, and **Brentford (£0.93M/pt)** delivered the best points-per-pound efficiency.
+
+---
+
 ## 🛠️ Data Engineering & Power Query Pipeline
 
 1. **Text Cleaning & Trimming (`Text.Trim` & `Text.Clean`)**: Removed leading/trailing whitespace and non-printable characters across all club, player, venue, nation, and referee fields.
@@ -56,21 +71,6 @@ An end-to-end sports & financial analytics Power BI solution analyzing the **202
 | **`Total Club Annual Payroll (£M)`** | `DIVIDE(SUM(Fact_Team_Stats[Annual_Payroll_GBP]), 1000000, 0)` | Official club wage expenditure (`£1,755.55M` total) |
 | **`Payroll Cost per League Point (£M)`** | `DIVIDE([Total Club Annual Payroll (£M)], [Total League Points], 0)` | Wage efficiency per point earned (`£1.66M/pt` league mean) |
 | **`Payroll Cost per Team Goal (£M)`** | `DIVIDE([Total Club Annual Payroll (£M)], [Team Goals For (Standings)], 0)` | Wage efficiency per goal scored (`£1.57M/goal` league mean) |
-
----
-
-## 📊 Report Pages & Key Insights
-
-1. **Page 1 — Standings & Match Overview**:
-   - **Liverpool (84 pts, +45 GD, 86 GF)** clinched the title ahead of **Arsenal (74 pts, +35 GD)**, **Manchester City (71 pts)**, and **Chelsea (69 pts)**.
-   - Across 380 fixtures, clubs scored **1,115 goals (2.93/match)** with **40.8% Home Wins (155)**, **34.7% Away Wins (132)**, and **24.5% Draws (93)**.
-2. **Page 2 — Club Tactical & Possession**:
-   - **Manchester City (61.6% possession, 28,022 touches)** and **Liverpool (57.7% possession, 1,924 progressive passes)** led territorial control, while **Nottingham Forest (65 pts on 41.2% possession)** excelled in direct counter-attacking play.
-3. **Page 3 — Player Scoring & Progression**:
-   - **Mohamed Salah** led the Golden Boot and Playmaker charts with **47 G+A (29 Goals, 18 Assists)**, followed by **Alexander Isak (29 G+A: 23G, 6A)**, **Bryan Mbeumo (27 G+A: 20G, 7A)**, and **Erling Haaland (25 G+A: 22G, 3A)**.
-4. **Page 4 — Wage Bill & Financial ROI**:
-   - Total league payroll reached **£1,755.55M/yr**, led by **Manchester City (£222.98M)**, **Manchester United (£189.36M)**, **Chelsea (£175.45M)**, and **Arsenal (£174.93M)**.
-   - **Ipswich Town (£0.51M/pt)**, **Bournemouth (£0.91M/pt)**, **Nottingham Forest (£0.92M/pt)**, and **Brentford (£0.93M/pt)** delivered the best points-per-pound efficiency.
 
 ---
 
