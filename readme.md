@@ -12,48 +12,6 @@ An end-to-end sports & financial analytics Power BI solution analyzing the **202
 
 ---
 
-## 🖼️ Dashboard Preview
-
-> *Tip: Export screenshots of each report page (or `File -> Export -> Export to PDF`) and place them in a `screenshots/` folder in your repository so visitors can view the dashboard directly on GitHub.*
-
-| Page 1: Standings & Match Overview | Page 2: Club Tactical & Possession |
-| :---: | :---: |
-|  |  |
-
-| Page 3: Player Scoring & Progression | Page 4: Wage Bill & Financial ROI |
-| :---: | :---: |
-|  |  |
-
-### Star Schema Data Model View
-
----
-![\modelview](Model_view.png)
-
-## 📂 Repository Structure
-
-```text
-📦 WPL-2024-25-PowerBI-Dashboard
- ┣ 📜 README.md                          # Project documentation, insights & architecture
- ┣ 📊 meet_patel_WPL.pbix                # Complete Power BI Dashboard & Data Model
- ┣ 📂 data/                              # Raw & cleaned CSV datasets
- ┃ ┣ 📜 fixtures.csv
- ┃ ┣ 📜 standings.csv
- ┃ ┣ 📜 team_stats.csv
- ┃ ┣ 📜 team_possession_stats.csv
- ┃ ┣ 📜 team_salary.csv
- ┃ ┣ 📜 player_stats.csv
- ┃ ┣ 📜 player_possession_stats.csv
- ┃ ┗ 📜 player_salaries.csv
- ┗ 📂 screenshots/                       # Dashboard & Model View images for GitHub preview
-   ┣ 🖼️ page1_standings_overview.png
-   ┣ 🖼️ page2_tactical_possession.png
-   ┣ 🖼️ page3_player_scoring.png
-   ┣ 🖼️ page4_financial_roi.png
-   ┗ 🖼️ model_view_star_schema.png
-```
-
----
-
 ## 🛠️ Data Engineering & Power Query Pipeline
 
 1. **Text Cleaning & Trimming (`Text.Trim` & `Text.Clean`)**: Removed leading/trailing whitespace and non-printable characters across all club, player, venue, nation, and referee fields.
